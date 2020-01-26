@@ -154,7 +154,7 @@ function Survey() {
 
     return (
         <>
-            <QuestionNumber />
+            <QuestionNumber questionNumber={currentQuestion + 1} />
             <div style={{ position: 'relative' }}>
                 <CSSTransition
                     in={showQuestion}
@@ -163,9 +163,9 @@ function Survey() {
                     unmountOnExit
                     onEntered={() => { setShowActions(true) }}
                 >
-                    <SurveyQuestion
+                    {showQuestion ? (<SurveyQuestion
                         key={questions[currentQuestion].id}
-                        question={questions[currentQuestion]} />
+                        question={questions[currentQuestion]} />) : (<div></div>)}
                 </CSSTransition>
             </div>
             {showActions &&
@@ -174,14 +174,14 @@ function Survey() {
                         setCurrentQuestion(currentQuestion -= 1)
                         setShowActions(false)
                         setShowQuestion(false)
-                        setTimeout(() => { setShowQuestion(true) }, 0)
-                    }}> <span class="btn__content" tabindex="-1">{'<<< Previous'}</span></button>}
+                        setTimeout(() => { setShowQuestion(true) }, 100)
+                    }}> <span class="btn__content" tabindex="-1">{'<<<'}&nbsp;&nbsp;&nbsp;&nbsp;Previous</span></button>}
                     {currentQuestion !== questions.length - 1 && <button onClick={() => {
                         setCurrentQuestion(currentQuestion += 1)
                         setShowActions(false)
                         setShowQuestion(false)
-                        setTimeout(() => { setShowQuestion(true) }, 0)
-                    }}><span class="btn__content" tabindex="-1">{'Next >>>'}</span></button>}
+                        setTimeout(() => { setShowQuestion(true) }, 100)
+                    }}><span class="btn__content" tabindex="-1">Next&nbsp;&nbsp;&nbsp;&nbsp;{'>>>'}</span></button>}
                 </div>
             }
         </>
