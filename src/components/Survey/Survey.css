@@ -29,9 +29,13 @@
     
   }
   
-  .question-actions button:hover {
+  .question-actions button:hover:not([disabled]) {
     color: #000;
     cursor: pointer;  
+  }
+
+  .question-actions button[disabled] {
+    color: rgba(0, 0, 0, 0.5);
   }
   
   .question-actions button:focus {

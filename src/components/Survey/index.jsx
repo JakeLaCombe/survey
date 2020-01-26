@@ -139,7 +139,7 @@ const questions =
     ]
 
 function Survey() {
-    const answers = {};
+    let [answers, setAnswers] = useState({});
     let [currentQuestion, setCurrentQuestion] = useState(0)
     let [showQuestion, setShowQuestion] = useState(false)
     let [showActions, setShowActions] = useState(true)
@@ -150,7 +150,7 @@ function Survey() {
             setTimeout(setShowQuestion(true), 0);
             showFirstQuestion.current = false;
         }
-    })
+    }, [showFirstQuestion])
 
     return (
         <>
@@ -160,28 +160,30 @@ function Survey() {
                     in={showQuestion}
                     timeout={300}
                     classNames="alert"
-                    unmountOnExit
                     onEntered={() => { setShowActions(true) }}
                 >
                     {showQuestion ? (<SurveyQuestion
                         key={questions[currentQuestion].id}
-                        question={questions[currentQuestion]} />) : (<div></div>)}
+                        value={answers[currentQuestion]}
+                        question={questions[currentQuestion]} onChange={(value) => {
+                            setAnswers({ ...answers, [currentQuestion]: value })
+                        }} />) : (<div></div>)}
                 </CSSTransition>
             </div>
             {showActions &&
                 <div className="question-actions">
-                    {currentQuestion !== 0 - 1 && <button onClick={() => {
+                    {currentQuestion !== 0 - 1 && <button key="prev" onClick={() => {
                         setCurrentQuestion(currentQuestion -= 1)
                         setShowActions(false)
                         setShowQuestion(false)
                         setTimeout(() => { setShowQuestion(true) }, 100)
-                    }}> <span class="btn__content" tabindex="-1">{'<<<'}&nbsp;&nbsp;&nbsp;&nbsp;Previous</span></button>}
-                    {currentQuestion !== questions.length - 1 && <button onClick={() => {
+                    }}> <span className="btn__content" tabIndex="-1">{'<<<'}&nbsp;&nbsp;&nbsp;&nbsp;Previous</span></button>}
+                    {currentQuestion !== questions.length - 1 && <button key="next" disabled={answers[currentQuestion.toString()] === undefined} onClick={() => {
                         setCurrentQuestion(currentQuestion += 1)
                         setShowActions(false)
                         setShowQuestion(false)
                         setTimeout(() => { setShowQuestion(true) }, 100)
-                    }}><span class="btn__content" tabindex="-1">Next&nbsp;&nbsp;&nbsp;&nbsp;{'>>>'}</span></button>}
+                    }}><span className="btn__content" tabIndex="-1">Next&nbsp;&nbsp;&nbsp;&nbsp;{'>>>'}</span></button>}
                 </div>
             }
         </>
