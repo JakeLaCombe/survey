@@ -1,0 +1,16 @@
+.question-number-container {
+    display: flex;
+    align-items: center;
+    color: #575757;
+}
+
+.question-number {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.question-number-decoration {
+    border-bottom: #bbb solid 1px;
+    height: 1px;
+    flex-grow: 1;
+}
