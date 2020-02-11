@@ -1,0 +1,38 @@
+.primary-button {
+    border: none;
+    font-size: 1.5em;
+    background-color: rgb(51, 76, 130);
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+}
+  
+.primary-button:hover:not([disabled]) {
+  background: #000;
+  cursor: pointer;  
+}
+
+.primary-button[disabled] {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.primary-button:focus {
+  outline: none;
+}
+
+.primary-button-btn__content {
+  display: inline-block;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.primary-button-btn__content:focus {
+    outline: none;
+}
+
+.primary-button:focus> .btn__content  {
+  box-shadow: 0 0 2px 2px #51a7e8; /* keyboard-only focus styles */
+}
+
+.primary-button.full-width {
+  width: 100%;
+}

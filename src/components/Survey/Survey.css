@@ -26,7 +26,6 @@
     border: none;
     color: rgb(51, 76, 130);
     font-size: 1em;
-    
   }
   
   .question-actions button:hover:not([disabled]) {
@@ -53,4 +52,12 @@
   
   .question-actions button:focus> .btn__content  {
     box-shadow: 0 0 2px 2px #51a7e8; /* keyboard-only focus styles */
-  } 
+  }
+
+  .next-button {
+      margin-left: auto;
+  }
+
+  .prev-button {
+      margin-right: auto;
+  }

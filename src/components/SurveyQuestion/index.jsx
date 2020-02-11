@@ -10,7 +10,7 @@ const SurveyQuestion = ({ question, value, onChange = () => { } }) => {
             <div className="answers">
                 {
                     question.answers.map((answer, index) => (<label key={answer} className="radio-container">{answer}
-                        <input name="answer" type="radio" onChange={(e) => { onChange(e.currentTarget.value); setCurrentValue(e.currentTarget.value) }} checked={currentValue == index} value={index} />
+                        <input name="answer" type="radio" onChange={(e) => { onChange(e.currentTarget.value); setCurrentValue(e.currentTarget.value) }} checked={currentValue === index} value={index} />
                         <span className="radio-button" />
                     </label>))
                 }
