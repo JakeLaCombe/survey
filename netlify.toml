@@ -5,5 +5,4 @@
   functions = "functions/"
   publish = "build/"
   base = "master"
-[deploy]
-  base = "master"
+  production = "master"
