@@ -5,7 +5,7 @@ const SurveyQuestion = ({ question, value, onChange = () => { } }) => {
     const [currentValue, setCurrentValue] = useState(value);
 
     return (
-        <form className="survey-question">
+        <form className="survey-question" a>
             <h1 className="survey-question-title">{question.title}</h1>
             <div className="answers">
                 {
