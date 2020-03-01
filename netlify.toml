@@ -4,4 +4,6 @@
   # Directory with the serverless Lambda functions to deploy to AWS.
   functions = "functions/"
   publish = "build/"
-  branch = "master"
+  base = "master"
+[deploy]
+  base = "master"
