@@ -6,7 +6,7 @@ const LandingPage = ({ onStart }) => {
     return (
         <div className="landing-page">
             <div style={{ margin: '4rem' }}></div>
-            <h1 className="landing-page-title">Welcome!</h1>
+            <h1 className="landing-page-title">Welce!</h1>
             <div style={{ margin: '4rem' }}></div>
             <Button onClick={onStart}>Click here to get started!</Button>
         </div>
