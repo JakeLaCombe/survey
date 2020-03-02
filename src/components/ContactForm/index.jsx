@@ -32,6 +32,7 @@ const ContactForm = ({ onStart, score }) => {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
+                "form-name": "contact",
                 "first": firstName,
                 "last": lastName,
                 "age": age,
