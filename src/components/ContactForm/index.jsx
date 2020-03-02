@@ -62,7 +62,7 @@ const ContactForm = ({ onStart, score }) => {
                     <Button fullWidth>Submit</Button>
                 </form>
             </>)}
-            {!sendingEmail && emailSent && <p className="alert-positive">Thank you for your response! We will repond as soon as possible!</p>}
+            {!sendingEmail && emailSent && <p className="alert-positive">Thank you for your response! We will respond as soon as possible!</p>}
         </div>
     );
 }
