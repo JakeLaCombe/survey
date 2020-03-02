@@ -59,6 +59,7 @@ const ContactForm = ({ onStart, score }) => {
                     <input className="input" name="age" type="number" placeholder="Age" value={age} onChange={(e) => { setAge(e.target.value) }} />
                     <input className="input" name="email" type="email" placeholder="Email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                     <input className="input" name="number" type="tel" placeholder="Phone Number" value={number} onChange={(e) => { setNumber(e.target.value) }} />
+                    <input name="details" type="hidden" placeholder="Details" />
                     <Button fullWidth>Submit</Button>
                 </form>
             </>)}
