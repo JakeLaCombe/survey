@@ -16,7 +16,7 @@ const States = {
 }
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(States.RESULTS)
+  const [currentPage, setCurrentPage] = useState(States.LANDING_PAGE)
   const [answers, setAnswers] = useState({})
 
   return (

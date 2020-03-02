@@ -61,11 +61,11 @@ export default [
     },
     {
         id: 6,
-        title: 'What do you expect out of your TSP?',
+        title: 'What do you expect out of your TSP? The word volatility is the rate at which your tsp account increases or decreases over a given period of time.',
         answers: [
-            'I expect my portfolio to significantly exceed inflation, even if this means higher levels of Volatility',
+            'I expect my portfolio to significantly exceed inflation, even if this means higher levels of volatility',
             'I expect my portfolio to exceed inflation, with reasonable levels of volatility',
-            'I exepct my portfolio to keep pace with inflation, with lover levels of volatility',
+            'I exepct my portfolio to keep pace with inflation, with lower levels of volatility',
             'I am more concerned with having as little volatility as possible more than keeping pace with inflation'
         ]
     },
@@ -76,7 +76,7 @@ export default [
             'May fluctuate by 20% up or down but averages 10% over the life of the investment',
             'May fluctuate by 15% up or down but averages 8% over the life of the investment',
             'May fluctuate by 10% up or down but averages 4-6% over the life of the investment',
-            'I would take less than 2% in exchange for my portfolio fluctuation a minimal amount',
+            'I would take less than a 2% total return for my portfolio to fluctuate a minimal amount.',
         ]
     },
     {
@@ -91,7 +91,7 @@ export default [
     },
     {
         id: 9,
-        title: 'When you are reviewing your TSP to what do you think will focus your attention?',
+        title: 'When you are reviewing your TSP what will you notice first?',
         answers: [
             'The overall longterm performance of the entire portfolio',
             'The most recent results of the entire portfolio',
