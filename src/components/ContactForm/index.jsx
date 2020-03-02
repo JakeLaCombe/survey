@@ -2,6 +2,8 @@ import React from 'react';
 import './ContactForm.css';
 import Button from '../Button';
 import { useState } from 'react';
+import { InvestmentTitle } from '../Results';
+import ReactLoading from 'react-loading';
 
 const encode = (data) => {
     return Object.keys(data)
@@ -9,46 +11,45 @@ const encode = (data) => {
         .join("&");
 }
 
-const ContactForm = ({ onStart }) => {
+const ContactForm = ({ onStart, score }) => {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [age, setAge] = useState("");
     const [email, setEmail] = useState("");
     const [number, setNumber] = useState("");
     const [emailSent, setEmailSent] = useState(false);
+    const [error, setError] = useState(false);
     const [sendingEmail, setSendingEmail] = useState(false);
 
-    /* joel@bobberwm.com */
-    const sendEmail = async (e) => {
+    const sendEmail = (e) => {
         e.stopPropagation();
         e.preventDefault();
 
         setSendingEmail(true);
+        setError(false);
 
-        const response = await fetch("/", {
+        fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
-                "form-name": "contact",
+                "first": firstName,
+                "last": lastName,
+                "age": age,
                 "email": email,
-                "name": "Thank you for referring to us",
-                "details": "We will respond to you very soon",
+                "number": number,
+                "details": firstName + " " + lastName + " has a score of " + score + " giving an investment strategy of " + InvestmentTitle(score),
             })
         })
-            .then(() => alert("Success!"))
-            .catch(error => alert(error));
+            .then(() => setEmailSent(true))
+            .catch(error => setError(true))
+            .finally(() => setSendingEmail(false));
 
-        const responseBody = await response;
-        setSendingEmail(false);
-
-        if (responseBody && responseBody.status == "200") {
-            setEmailSent(true);
-        }
     }
 
     return (
         <div>
-            {sendingEmail && <p>Sending Email</p>}
+            {sendingEmail && <div className="loading-container"><ReactLoading className="loading-icon" type="spin" color="#000000" height={'20%'} width={'20%'} /><p>Sending Email</p></div>}
+            {error && <p className="alert-error">An error occured. Please try again.</p>}
             {!sendingEmail && !emailSent && (<>
                 <h1 className="contact-form-title">Contact an Advisor</h1>
                 <p className="contact-form-description">Thank you for your interest in us! Please fill out The form below, and advise will be with you as soon as possible!</p>
@@ -61,7 +62,7 @@ const ContactForm = ({ onStart }) => {
                     <Button fullWidth>Submit</Button>
                 </form>
             </>)}
-            {!sendingEmail && emailSent && <p>Thank you for your response! We will repond as soon as possible!</p>}
+            {!sendingEmail && emailSent && <p className="alert-positive">Thank you for your response! We will repond as soon as possible!</p>}
         </div>
     );
 }

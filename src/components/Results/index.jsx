@@ -5,7 +5,7 @@ import Button from '../Button';
 import './Results.css';
 import ContactForm from '../ContactForm';
 
-const InvestmentTitle = (score) => {
+export const InvestmentTitle = (score) => {
     if (score < 25) {
         return 'PRESERVATION OF CAPITAL';
     } else if (score < 50) {
@@ -80,7 +80,7 @@ const Results = ({ answers }) => {
 
     return (
         <>
-            {sendingEmail && <ContactForm />}
+            {sendingEmail && <ContactForm score={score} />}
             {!sendingEmail && (
                 <>
                     <h1 className="results-title">{InvestmentTitle(score)}</h1>

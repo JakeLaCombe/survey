@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Layout />
-      <div style={{ marginTop: '3em' }}>
+      <div style={{ marginTop: '3em', paddingBottom: '3em' }}>
         <Container>
           <ProgressBar checkpoint={currentPage} />
           <div style={{ marginTop: '2em' }} />
