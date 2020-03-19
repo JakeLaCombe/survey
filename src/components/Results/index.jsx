@@ -19,21 +19,21 @@ export const InvestmentTitle = (score) => {
 
 const InvestmentDescription = (score) => {
     if (score < 25) {
-        return `YOU ARE GROWTH FOCUSED. YOUR PORTFOLIO VALUE MAY EXPERIENCE LARGE SWINGS UP OR DOWN.
-        WE RECOMMEND THAT YOU ALLOCATE YOUR FUNDS INSIDE YOUR TSP AS FOLLOWS:`;
+        return `YOU ARE FOCUSED ON PRESERVING WHAT YOU HAVE SAVED. YOUR PORTFOLIO VALUE MAY STILL
+        EXPERIENCE VOLITILITY BUT IS EXPECTED TO BE MUCH LESS THAN MARKET AVERAGE. WE
+        RECOMMEND THAT YOU ALLOCATE YOUR FUNDS INSIDE YOUR TSP AS FOLLOWS:`;
     } else if (score < 50) {
-        return `YOU ARE GROWTH AND INCOME FOCUSED. YOUR PORTFOLIO VALUE MAY EXPERIENCE MODERATE
-        SWINGS UP OR DOWN. WE RECOMMEND THAT YOU ALLOCATE THE FUNDS INSIDE YOUR TSP AS
-        FOLLOWS:`;
-    } else if (score < 75) {
         return `YOU ARE BALANCED FOCUSED. BOTH GROWTH AND INCOME ARE EQUALLY IMPORTANT IN YOUR
         PORTFOLIO. YOU CAN EXPECT MODERATE TO LESS THAN MODERATE SWINGS UP OR DOWN IN THE
         VALUE OF YOUR TSP ACCOUNT. WE RECOMMEND THAT YOU ALLOCATE YOUR FUNDS INSIDE YOUR TSP
         AS FOLLOWS:`;
+    } else if (score < 75) {
+        return `YOU ARE GROWTH AND INCOME FOCUSED. YOUR PORTFOLIO VALUE MAY EXPERIENCE MODERATE
+        SWINGS UP OR DOWN. WE RECOMMEND THAT YOU ALLOCATE THE FUNDS INSIDE YOUR TSP AS
+        FOLLOWS:`;
     } else {
-        return `YOU ARE FOCUSED ON PRESERVING WHAT YOU HAVE SAVED. YOUR PORTFOLIO VALUE MAY STILL
-        EXPERIENCE VOLITILITY BUT IS EXPECTED TO BE MUCH LESS THAN MARKET AVERAGE. WE
-        RECOMMEND THAT YOU ALLOCATE YOUR FUNDS INSIDE YOUR TSP AS FOLLOWS:`;
+        return `YOU ARE GROWTH FOCUSED. YOUR PORTFOLIO VALUE MAY EXPERIENCE LARGE SWINGS UP OR DOWN.  
+        WE RECOMMEND THAT YOU ALLOCATE YOUR FUNDS INSIDE YOUR TSP AS FOLLOWS:`;
     }
 }
 
@@ -123,11 +123,11 @@ const Results = ({ answers }) => {
                         </div>
                         <div style={{ display: 'flex', width: '33%', justifyContent: 'center', marginLeft: 'auto', marginRight: '1em' }}>
                             <div display="table">
-                                {ratios.C > 0 && <div className="legend"><span className="legend-color legend-color-c" />C Plan</div>}
-                                {ratios.S > 0 && <div className="legend"><span className="legend-color legend-color-s" />S Plan</div>}
-                                {ratios.I > 0 && <div className="legend"><span className="legend-color legend-color-i" />I Plan</div>}
-                                {ratios.F > 0 && <div className="legend"><span className="legend-color legend-color-f" />F Plan</div>}
-                                {ratios.G > 0 && <div className="legend"><span className="legend-color legend-color-g" />G Plan</div>}
+                                {ratios.C > 0 && <div className="legend"><span className="legend-color legend-color-c" />C fund</div>}
+                                {ratios.S > 0 && <div className="legend"><span className="legend-color legend-color-s" />S fund</div>}
+                                {ratios.I > 0 && <div className="legend"><span className="legend-color legend-color-i" />I fund</div>}
+                                {ratios.F > 0 && <div className="legend"><span className="legend-color legend-color-f" />F fund</div>}
+                                {ratios.G > 0 && <div className="legend"><span className="legend-color legend-color-g" />G fund</div>}
                             </div>
                         </div>
 

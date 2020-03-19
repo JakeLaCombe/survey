@@ -4,7 +4,6 @@ import QuestionNumber from '../QuestionNumber';
 import SurveyQuestion from '../SurveyQuestion';
 import { CSSTransition } from 'react-transition-group';
 import questions from '../questions'
-import ScoreCalculation from '../../ScoreCalculation';
 
 function Survey({ onSurveyFinished }) {
     let [answers, setAnswers] = useState({});
@@ -23,7 +22,6 @@ function Survey({ onSurveyFinished }) {
     return (
         <>
             <QuestionNumber questionNumber={currentQuestion + 1} />
-            <p>Current Score: {ScoreCalculation(answers)}</p>
             <div style={{ position: 'relative' }}>
                 <CSSTransition
                     in={showQuestion}

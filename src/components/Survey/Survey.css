@@ -56,9 +56,11 @@
   }
 
   .next-button {
+      background: transparent;
       margin-left: auto;
   }
 
   .prev-button {
+      background: transparent;
       margin-right: auto;
   }
