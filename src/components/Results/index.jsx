@@ -123,11 +123,11 @@ const Results = ({ answers }) => {
                         </div>
                         <div style={{ display: 'flex', width: '33%', justifyContent: 'center', marginLeft: 'auto', marginRight: '1em' }}>
                             <div display="table">
-                                {ratios.C > 0 && <div className="legend"><span className="legend-color legend-color-c" />C fund</div>}
-                                {ratios.S > 0 && <div className="legend"><span className="legend-color legend-color-s" />S fund</div>}
-                                {ratios.I > 0 && <div className="legend"><span className="legend-color legend-color-i" />I fund</div>}
-                                {ratios.F > 0 && <div className="legend"><span className="legend-color legend-color-f" />F fund</div>}
-                                {ratios.G > 0 && <div className="legend"><span className="legend-color legend-color-g" />G fund</div>}
+                                {ratios.C > 0 && <div className="legend"><span className="legend-color legend-color-c" />C Fund</div>}
+                                {ratios.S > 0 && <div className="legend"><span className="legend-color legend-color-s" />S Fund</div>}
+                                {ratios.I > 0 && <div className="legend"><span className="legend-color legend-color-i" />I Fund</div>}
+                                {ratios.F > 0 && <div className="legend"><span className="legend-color legend-color-f" />F Fund</div>}
+                                {ratios.G > 0 && <div className="legend"><span className="legend-color legend-color-g" />G Fund</div>}
                             </div>
                         </div>
 
