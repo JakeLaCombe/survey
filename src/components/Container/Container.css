@@ -1,7 +1,8 @@
 .Container {
-    max-width: 750px;
-    padding-left: 3em;
-    padding-right: 3em;
-    margin-left: auto;
-    margin-right: auto;
+  box-sizing: border-box;
+  max-width: 750px;
+  padding-left: 3em;
+  padding-right: 3em;
+  margin-left: auto;
+  margin-right: auto;
 }

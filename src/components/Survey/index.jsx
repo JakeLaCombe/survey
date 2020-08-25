@@ -22,7 +22,7 @@ function Survey({ onSurveyFinished }) {
   return (
     <>
       <QuestionNumber questionNumber={currentQuestion + 1} />
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative", flexBasis: "35em" }}>
         <CSSTransition
           in={showQuestion}
           timeout={300}

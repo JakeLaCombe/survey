@@ -1,57 +1,59 @@
 .progress-bar-container {
-    position: relative;
-    height: 40px;
-    display: flex;
-    align-items: center;
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Progress {
-    height: 15px;
-    background: none;
-    width: 100%;
-    appearance: none;
+  height: 15px;
+  background: none;
+  width: 100%;
+  appearance: none;
 }
 
 .Progress::-webkit-progress-bar {
-    width: 100%;
-    background-color: #eee;
-    border-radius: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 .Progress::-webkit-progress-value {
-    width: 100%;
-    background-color: rgb(51, 76, 130);
-    border-radius: 100px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  width: 100%;
+  background-color: rgb(51, 76, 130);
+  border-radius: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
 }
 
 .progress-bar-checkpoint {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    display: inline-block;
-    background: #eee;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: inline-block;
+  background: #eee;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .checkpoint-1 {
-    left: -20px;
+  left: -20px;
 }
 
 .checkpoint-2 {
-    left: calc(33% - 20px);
+  left: calc(33% - 20px);
 }
 
 .checkpoint-3 {
-    left: calc(66.5% - 20px);
+  left: calc(66.5% - 20px);
 }
 
 .checkpoint-4 {
-    right: -20px;
+  right: -20px;
 }
 
 .active {
-    background: rgb(51, 76, 130);
+  background: rgb(51, 76, 130);
 }

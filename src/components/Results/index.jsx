@@ -40,21 +40,13 @@ const InvestmentDescription = (score) => {
 const InvestmentRatios = (score) => {
   if (score < 25) {
     return {
-      C: 50,
-      S: 25,
-      I: 25,
-      F: 0,
-      G: 0,
+      C: 10,
+      S: 0,
+      I: 10,
+      F: 10,
+      G: 70,
     };
   } else if (score < 50) {
-    return {
-      C: 50,
-      S: 10,
-      I: 15,
-      F: 25,
-      G: 0,
-    };
-  } else if (score < 75) {
     return {
       C: 45,
       S: 0,
@@ -62,13 +54,21 @@ const InvestmentRatios = (score) => {
       F: 45,
       G: 0,
     };
+  } else if (score < 75) {
+    return {
+      C: 50,
+      S: 10,
+      I: 15,
+      F: 25,
+      G: 0,
+    };
   } else {
     return {
-      C: 10,
-      S: 0,
-      I: 10,
-      F: 10,
-      G: 70,
+      C: 50,
+      S: 25,
+      I: 25,
+      F: 0,
+      G: 0,
     };
   }
 };

@@ -6,7 +6,7 @@ export default [
       "I am a current full time federal employee",
       "I am currently on active duty in the military",
       "I am a part time federal employee or national guard/reserve military member",
-      "I am a retired military or federal employee",
+      "I am retired military or a federal employee",
     ],
   },
   {
