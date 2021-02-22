@@ -60,20 +60,21 @@ function App() {
           <p>
             <strong>CONTENT DISCLAIMER:</strong>
           </p>
-          {currentPage === States.LANDING_PAGE && <p>
-            Securities offered through Registered Representatives of Cambridge
-            Investment Research, Inc. a broker/dealer, Member FINRA/SIPC; to
-            residents of MO and IL. Advisory services offered through Cambridge
-            Investment Research Advisors, Inc., a Registered Investment Advisor.
-            Cambridge and Bobber Wealth Management are separate entities.
-          </p>}
-          {currentPage === States.RESULTS && <p>
-            The model advertised herein is not designed based on the individual 
-            needs of any one specific client or investor. In other words, it is 
-            not a customized strategy designed on the specific financial 
-            circumstances of the client. Please consult a financial 
-            professional for individualized advice.
-          </p>}
+          <p>
+            Recommendations relating to this questionnaire will be based on the assumption
+            that the answers to this questionnaire are complete, accurate, and reflect your
+            current situation.  Please notify your representative promptly if your financial
+            situation or any of the information contained in your questionnaire changes.
+            This form collects data for informational purposes only and does not
+            supersede any data or information reported on official Cambridge forms.
+          </p>
+          <p>
+            Securities offered through Registered Representatives of Cambridge Investment
+            Research, Inc. a broker/dealer, Member FINRA/SIPC; to residents of MO, IL,
+            Washington D.C.. Advisory services offered through Cambridge Investment
+            Research Advisors, Inc., a Registered Investment Advisor. Cambridge
+            and Bobber Wealth Management are separate entities.
+          </p>
           <p>
             Check the background of your financial professional on FINRA’s
             BrokerCheck{" "}
