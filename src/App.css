@@ -7,8 +7,17 @@
 .progress-container {
   flex-basis: 35em;
   width: 100%;
+  margin-bottom: 3em;
 }
 
 .disclaimer {
   margin-top: auto;
+}
+
+.disclaimer-header {
+  font-size: 1.5em;
+}
+
+.spacer {
+  margin-right: 1em;
 }

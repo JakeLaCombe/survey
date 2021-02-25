@@ -167,6 +167,11 @@ const Results = ({ answers }) => {
               Contact an Advisor
             </Button>
           </div>
+          <p>
+            <small>The model advertised herein is not designed based on the individual needs of any one specific client or investor.
+            In other words, it is not a customized strategy designed on the specific financial circumstances of the client.
+            Please consult a financial professional for individualized advice.</small>
+          </p>
         </>
       )}
     </>

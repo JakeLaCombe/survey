@@ -57,9 +57,10 @@ function App() {
           {currentPage === States.RESULTS && <Results answers={answers} />}
         </Container>
         <Container classes="disclaimer">
-          <p>
-            <strong>CONTENT DISCLAIMER:</strong>
-          </p>
+          <div className="spacer-horizontal" />
+          <h1 className="disclaimer-header">
+            CONTENT DISCLAIMER:
+          </h1>
           <p>
             Recommendations relating to this questionnaire will be based on the assumption
             that the answers to this questionnaire are complete, accurate, and reflect your
@@ -80,6 +81,16 @@ function App() {
             BrokerCheck{" "}
             <a href="https://brokercheck.finra.org/">
               https://brokercheck.finra.org/
+            </a>
+          </p>
+          <h2>Addtional Resources</h2>
+          <p>
+            <a href="https://www.finra.org/#/">
+             FINRA
+            </a>
+            <span className="spacer" />
+            <a href="https://www.sipc.org/">
+              SIPC
             </a>
           </p>
         </Container>
